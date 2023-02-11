@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    tools:context=".ui.GameFinishedFragment">
+
+
+    <ImageView
+        android:id="@+id/iv_finish_result"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_margin="48dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/finish_image"
+        android:src="@drawable/smile" />
+
+    <TextView
+        android:id="@+id/tv_finish_required_answers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/finish_required_answers"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_finish_score_answers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/finish_score_answers"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_finish_required_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/required_percent"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_finish_score_percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/score_percent"
+        android:textSize="18sp" />
+
+
+</LinearLayout>
