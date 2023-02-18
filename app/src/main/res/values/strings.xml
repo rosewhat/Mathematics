@@ -17,4 +17,5 @@
     <string name="score_percent">Процент правильных ответов: %s</string>
     <string name="finish_score_answers">Ваш счет: %s</string>
     <string name="progress_answers">Правильных ответов: %s(минимум %s)</string>
+    <string name="button_go_to_chooseLevel">Еще раз</string>
 </resources>

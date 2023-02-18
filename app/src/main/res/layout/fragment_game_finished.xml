@@ -47,8 +47,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_weight="1"
         android:text="@string/score_percent"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button_retry_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="#009688"
+        android:text="@string/button_go_to_chooseLevel"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>
