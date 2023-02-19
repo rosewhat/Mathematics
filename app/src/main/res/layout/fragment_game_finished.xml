@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:layout_margin="48dp"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/finish_image"
+        android:contentDescription="@string/game_over"
         android:src="@drawable/smile" />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/finish_required_answers"
+        android:text="@string/required_score"
         android:textSize="18sp" />
 
     <TextView
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/finish_score_answers"
+        android:text="@string/score_answers"
         android:textSize="18sp" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/required_percent"
+        android:text="@string/required_percentage"
         android:textSize="18sp" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_weight="1"
-        android:text="@string/score_percent"
+        android:text="@string/score_percentage"
         android:textSize="18sp" />
 
     <Button
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:backgroundTint="#009688"
-        android:text="@string/button_go_to_chooseLevel"
+        android:text="@string/retry"
         android:textColor="@color/white" />
 
 
