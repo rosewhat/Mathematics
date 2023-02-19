@@ -5,6 +5,7 @@ import android.os.CountDownTimer
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.rosewhat.mathematics.R
 import com.rosewhat.mathematics.data.GameRepositoryImpl
 import com.rosewhat.mathematics.domain.entity.GameResult
@@ -15,10 +16,17 @@ import com.rosewhat.mathematics.domain.repository.GameRepository
 import com.rosewhat.mathematics.domain.usecases.GenerateQuestionUseCase
 import com.rosewhat.mathematics.domain.usecases.GetGameSettingsUseCase
 
-class GameViewModel(application: Application) : AndroidViewModel(application) {
+class GameViewModel(
+    private val application: Application,
+    private val level: Level
+) : ViewModel() {
+
+    init {
+        startGame()
+    }
 
     private lateinit var gameSettings: GameSettings
-    private lateinit var level: Level
+
 
     private val context = application
 
@@ -63,8 +71,8 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
 
     private var timer: CountDownTimer? = null
 
-    fun startGame(level: Level) {
-        getGameSettings(level)
+    private fun startGame() {
+        getGameSettings()
         startTimer()
         generateQuestion()
         updateProgress()
@@ -109,8 +117,7 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     }
 
 
-    private fun getGameSettings(level: Level) {
-        this.level = level
+    private fun getGameSettings() {
         this.gameSettings = getGameSettingUseCase.invoke(level)
         _minPercent.value = gameSettings.minPercentOfRightAnswers
     }

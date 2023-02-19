@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.rosewhat.mathematics.R
 import com.rosewhat.mathematics.databinding.FragmentChooseLevelBinding
 import com.rosewhat.mathematics.domain.entity.Level
@@ -45,10 +46,17 @@ class ChooseLevelFragment : Fragment() {
     }
 
     private fun launchGameFragment(level: Level) {
-        requireActivity().supportFragmentManager.beginTransaction()
+        /*requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.main_container, GameFragment.newInstance(level = level))
             .addToBackStack(null)
-            .commit()
+            .commit()*/
+
+        findNavController().navigate(
+            ChooseLevelFragmentDirections.actionChooseLevelFragmentToGameFragment(
+                level
+            )
+        )
+
     }
 
     override fun onDestroyView() {
@@ -56,14 +64,6 @@ class ChooseLevelFragment : Fragment() {
         _binding = null
     }
 
-    companion object {
-
-        const val NAME = "ChooseLevelFragment"
-
-        fun newInstance(): ChooseLevelFragment {
-            return ChooseLevelFragment()
-        }
-    }
 
 
 }

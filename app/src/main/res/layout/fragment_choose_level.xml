@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/level_header"
+        android:text="@string/choose_level_title"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@android:color/holo_blue_light"
-        android:text="@string/choose_level_test" />
+        android:text="@string/test_level" />
 
     <Button
         android:id="@+id/button_level_easy"
@@ -32,7 +32,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#E91E63"
-        android:text="@string/choose_level_easy" />
+        android:text="@string/easy_level" />
 
     <Button
         android:id="@+id/button_level_normal"
@@ -41,7 +41,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#FFEB3B"
-        android:text="@string/choose_level_normal" />
+        android:text="@string/normal_level" />
 
     <Button
         android:id="@+id/button_level_hard"
@@ -50,5 +50,5 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#4CAF50"
-        android:text="@string/choose_level_hard" />
+        android:text="@string/hard_level" />
 </LinearLayout>
